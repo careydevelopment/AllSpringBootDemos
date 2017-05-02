@@ -8,8 +8,16 @@
 
     <head>
         <title>Home | Carey Development Demos</title>
-        <meta content="Twitter login demo" name="description" />
+        <meta content="Carey Development Demos" name="description" />
         <object th:include="/fragments/head :: head" th:remove="tag"></object>
+        <style>
+        	.demoImage {
+        		margin-top:5px; 
+        		max-width:250px; 
+        		height:auto; 
+        		display:inline-block;
+        	}
+        </style>
     </head>
 
     <body class="page-container-bg-solid">
@@ -19,120 +27,214 @@
                 <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
                     <div class="container">
                     	<div class="row">
-                        	<div class="col-md-9">
-        		                <div class="portlet box blue">
-                                    <div class="portlet-title">
-                                        <div class="caption">
-                                            <i class="fa fa-home"></i>Spring Boot Demos </div>
-                                        <div class="tools">
-                                            <a href="javascript:;" class="collapse"> </a>
-                                            <a href="#portlet-config" data-toggle="modal" class=" "> </a>
-                                        </div>
-                                    </div>
-                                    <div class="portlet-body">
-                                        <div class="panel-group accordion" id="accordion3">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_1"> Twitter Login Demo </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse_3_1" class="panel-collapse in">
-                                                    <div class="panel-body">
-														<p> Lets a user login with with Twitter to a Spring Boot app. Great for 
+      	                      <div class="portlet light portlet-fit ">
+                                      <div class="portlet-title">
+                                          <div class="caption">
+                                              <i class="icon-microphone font-dark hide"></i>
+                                              <span class="caption-subject bold font-dark uppercase"> Integration Demos</span>
+                                              <span class="caption-helper"></span>
+                                          </div>
+                                      </div>
+                                      <div class="portlet-body">
+                                          <div class="row">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="mt-widget-2">
+                                                      <div class="mt-head">
+                                                      	  <div style="text-align:center">
+                                                      	  	<img th:src="@{/images/twitter1.png}" class="demoImage"/>
+                                                          </div>
+                                                      </div>
+                                                      <div class="mt-body" style="margin-top:15px">
+                                                          <h3 class="mt-body-title"> Twitter Login </h3>
+                                                          <p class="mt-body-description"> Lets a user login with with Twitter to a Spring Boot app. Great for 
+		                                                		implementing SSO-like capabilities so you don't have to force users to
+		                                                		go through the whole email verification thing. </p>
+                                                          <div class="mt-body-actions">
+                                                              <div class="btn-group btn-group btn-group-justified">
+                                                                  <a href="./twitterLogin" class="btn">
+                                                                      <i class="icon-picture"></i> View Demo </a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="mt-widget-2">
+                                                      <div class="mt-head">
+                                                      	  <div style="text-align:center">
+                                                      	  	<img th:src="@{/images/facebook.jpg}" class="demoImage"/>
+                                                          </div>
+                                                      </div>
+                                                      <div class="mt-body" style="margin-top:15px">
+                                                          <h3 class="mt-body-title"> Facebook Login </h3>
+                                                          <p class="mt-body-description"> Lets a user login with with Facebook to a Spring Boot app. Great for 
 		                                                implementing SSO-like capabilities so you don't have to force users to
 		                                                go through the whole email verification thing. </p>
-		                                                <button type="button" class="btn green mt-ladda-btn ladda-button btn-circle btn-outline" onclick="document.location='./twitterLogin'" data-style="slide-down" data-spinner-color="#333">
-                                                        	<span class="ladda-label"><i class="fa fa-hand-o-right"></i> View Demo</span>
-                                                        </button>                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_2"> Facebook Login Demo </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse_3_2" class="panel-collapse collapse">
-													<div class="panel-body">
-														<p> Lets a user login with with Facebook to a Spring Boot app. Great for 
+                                                          <div class="mt-body-actions">
+                                                              <div class="btn-group btn-group btn-group-justified">
+                                                                  <a href="./facebookLogin" class="btn">
+                                                                      <i class="icon-picture"></i> View Demo </a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="mt-widget-2">
+                                                      <div class="mt-head">
+                                                      	  <div style="text-align:center">
+                                                      	  	<img th:src="@{/images/zillow.png}" class="demoImage"/>
+                                                          </div>
+                                                      </div>
+                                                      <div class="mt-body" style="margin-top:15px">
+                                                          <h3 class="mt-body-title"> Zillow API </h3>
+                                                          <p class="mt-body-description"> This demo demonstrates integration with the Zillow API. Just enter a U.S. home address and view its valuation!</p>
+                                                          <div class="mt-body-actions">
+                                                              <div class="btn-group btn-group btn-group-justified">
+                                                                  <a href="./enterAddress" class="btn">
+                                                                      <i class="icon-picture"></i> View Demo </a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>                                              
+                                          </div>
+										  <div class="portlet-body">
+	                                          <div class="row">
+	                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+	                                                  <div class="mt-widget-2">
+	                                                      <div class="mt-head">
+	                                                      	  <div style="text-align:center">
+	                                                      	  	<img th:src="@{/images/youtube.png}" class="demoImage"/>
+	                                                          </div>
+	                                                      </div>
+	                                                      <div class="mt-body" style="margin-top:15px">
+	                                                          <h3 class="mt-body-title"> YouTube API </h3>
+	                                                          <p class="mt-body-description"> This demo demonstrates integration with the YouTube API. Enter a search string and find up to 5 videos that match it. </p>
+	                                                          <div class="mt-body-actions">
+	                                                              <div class="btn-group btn-group btn-group-justified">
+	                                                                  <a href="./youtubeDemo" class="btn">
+	                                                                      <i class="icon-picture"></i> View Demo </a>
+	                                                              </div>
+	                                                          </div>
+	                                                      </div>
+	                                                  </div>
+	                                              </div>
+	                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+	                                              </div>
+	                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+	                                              </div>                                              
+	                                          </div>                                          
+										</div>
+									</div>
+                              </div>                                         
+                    	</div>
+                    	
+                    	
+                    	<div class="row">
+      	                      <div class="portlet light portlet-fit ">
+                                      <div class="portlet-title">
+                                          <div class="caption">
+                                              <i class="icon-microphone font-dark hide"></i>
+                                              <span class="caption-subject bold font-dark uppercase"> Functionality Demos</span>
+                                              <span class="caption-helper"></span>
+                                          </div>
+                                      </div>
+                                      <div class="portlet-body">
+                                          <div class="row">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="mt-widget-2">
+                                                      <div class="mt-head">
+                                                      	  <div style="text-align:center">
+                                                      	  	<img th:src="@{/images/rest.jpeg}" class="demoImage"/>
+                                                          </div>
+                                                      </div>
+                                                      <div class="mt-body" style="margin-top:15px">
+                                                          <h3 class="mt-body-title"> REST Demo </h3>
+                                                          <p class="mt-body-description"> This simple REST (REpresentational State Transfer) demo simulates a service that returns
+                                                        employee info in JSON (JavaScript Object Notation) format.</p>
+                                                          <div class="mt-body-actions">
+                                                              <div class="btn-group btn-group btn-group-justified">
+                                                                  <a href="./employees" class="btn">
+                                                                      <i class="icon-picture"></i> View Demo </a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="mt-widget-2">
+                                                      <div class="mt-head">
+                                                      	  <div style="text-align:center">
+                                                      	  	<img th:src="@{/images/ajax.png}" class="demoImage"/>
+                                                          </div>
+                                                      </div>
+                                                      <div class="mt-body" style="margin-top:15px">
+                                                          <h3 class="mt-body-title"> AJAX Demo </h3>
+                                                          <p class="mt-body-description"> Lets a user login with with Facebook to a Spring Boot app. Great for 
 		                                                implementing SSO-like capabilities so you don't have to force users to
 		                                                go through the whole email verification thing. </p>
-		                                                <button type="button" class="btn green mt-ladda-btn ladda-button btn-circle btn-outline" onclick="document.location='./facebookLogin'" data-style="slide-down" data-spinner-color="#333">
-                                                        	<span class="ladda-label"><i class="fa fa-hand-o-right"></i> View Demo</span>
-                                                        </button>                                                
-                                                    </div>
-                                            	</div>
-                                           	</div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_3"> Thymeleaf Table Demo </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse_3_3" class="panel-collapse collapse">
-													<div class="panel-body">
-														<p> Believe it or not, it's harder to create dynamic tables with Thymleleaf than you might think. 
-														This demo shows you the table in action, which doesn't seem very impressive. Be sure to have a look
-														at the code so you can see how it's done. </p>
-		                                                <button type="button" class="btn green mt-ladda-btn ladda-button btn-circle btn-outline" onclick="document.location='./thymeleafTable'" data-style="slide-down" data-spinner-color="#333">
-                                                        	<span class="ladda-label"><i class="fa fa-hand-o-right"></i> View Demo</span>
-                                                        </button>                                                    
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_4"> REST Demo </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse_3_4" class="panel-collapse collapse">
-													<div class="panel-body">
-                                                        <p>This simple REST (REpresentational State Transfer) demo simulates a service that returns
-                                                        employee info in JSON (JavaScript Object Notation) format. </p>
-		                                                <button type="button" class="btn green mt-ladda-btn ladda-button btn-circle btn-outline" onclick="document.location='./employees'" data-style="slide-down" data-spinner-color="#333">
-                                                        	<span class="ladda-label"><i class="fa fa-hand-o-right"></i> View Demo</span>
-                                                        </button>                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_5"> AJAX Demo </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse_3_5" class="panel-collapse collapse">
-													<div class="panel-body">
-                                                        <p>This AJAX Demo depends on the REST demo. It shows how you can implement AJAX functionality within a Spring Boot app. </p>
-		                                                <button type="button" class="btn green mt-ladda-btn ladda-button btn-circle btn-outline" onclick="document.location='./ajaxDemo'" data-style="slide-down" data-spinner-color="#333">
-                                                        	<span class="ladda-label"><i class="fa fa-hand-o-right"></i> View Demo</span>
-                                                        </button>                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_6"> Form Validation Demo </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse_3_6" class="panel-collapse collapse">
-													<div class="panel-body">
-                                                        <p>This form validation demo shows how you can validate form fields with annotations on model objects. No JQuery required!</p>
-		                                                <button type="button" class="btn green mt-ladda-btn ladda-button btn-circle btn-outline" onclick="document.location='./form'" data-style="slide-down" data-spinner-color="#333">
-                                                        	<span class="ladda-label"><i class="fa fa-hand-o-right"></i> View Demo</span>
-                                                        </button>                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        	</div>
-                        </div>
+                                                          <div class="mt-body-actions">
+                                                              <div class="btn-group btn-group btn-group-justified">
+                                                                  <a href="./ajaxDemo" class="btn">
+                                                                      <i class="icon-picture"></i> View Demo </a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="mt-widget-2">
+                                                      <div class="mt-head">
+                                                      	  <div style="text-align:center">
+                                                      	  	<img th:src="@{/images/validation.jpg}" class="demoImage"/>
+                                                          </div>
+                                                      </div>
+                                                      <div class="mt-body" style="margin-top:15px">
+                                                          <h3 class="mt-body-title"> Form Validation </h3>
+                                                          <p class="mt-body-description">This form validation demo shows how you can validate form fields with annotations on model objects. No JQuery required!</p>
+                                                          <div class="mt-body-actions">
+                                                              <div class="btn-group btn-group btn-group-justified">
+                                                                  <a href="./form" class="btn">
+                                                                      <i class="icon-picture"></i> View Demo </a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>                                              
+                                          </div>
+										  <div class="portlet-body">
+	                                          <div class="row">
+	                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+	                                                  <div class="mt-widget-2">
+	                                                      <div class="mt-head">
+	                                                      	  <div style="text-align:center">
+	                                                      	  	<img th:src="@{/images/table.PNG}" class="demoImage"/>
+	                                                          </div>
+	                                                      </div>
+	                                                      <div class="mt-body" style="margin-top:15px">
+	                                                          <h3 class="mt-body-title"> Thymeleaf Table Demo </h3>
+	                                                          <p class="mt-body-description"> Believe it or not, it's harder to create dynamic tables with Thymleleaf than you might think. 
+																	This demo shows you the table in action, which doesn't seem very impressive. Be sure to have a look
+																	at the code so you can see how it's done. </p>
+	                                                          <div class="mt-body-actions">
+	                                                              <div class="btn-group btn-group btn-group-justified">
+	                                                                  <a href="./thymeleafTable" class="btn">
+	                                                                      <i class="icon-picture"></i> View Demo </a>
+	                                                              </div>
+	                                                          </div>
+	                                                      </div>
+	                                                  </div>
+	                                              </div>
+	                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+	                                              </div>
+	                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+	                                              </div>                                              
+	                                          </div>                                          
+										</div>
+									</div>
+                              </div>                                         
+                    	</div>                    	
                     </div>
                 </div>
             </div>
