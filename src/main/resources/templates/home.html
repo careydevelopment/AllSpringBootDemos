@@ -9,7 +9,7 @@
     <head>
         <title>Home | Carey Development Demos</title>
         <meta content="Carey Development Demos" name="description" />
-        <object th:include="/fragments/head :: head" th:remove="tag"></object>
+        <object th:include="fragments/head :: head" th:remove="tag"></object>
         <style>
         	.demoImage {
         		margin-top:5px; 
@@ -26,7 +26,10 @@
             <div class="page-content-wrapper">
                 <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
                     <div class="container">
-                    	<div class="row">
+                    	<div class="row" style="text-align:center">
+                    		<img th:src="@{/images/demos.png}" style="height:auto;display:inline-block"/>
+                    	</div>
+                    	<div class="row" style="margin-top:40px">
       	                      <div class="portlet light portlet-fit ">
                                       <div class="portlet-title">
                                           <div class="caption">
