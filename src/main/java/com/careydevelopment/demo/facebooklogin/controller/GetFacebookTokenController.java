@@ -54,8 +54,8 @@ public class GetFacebookTokenController {
     	Facebook facebook = null;
     	
     	//set the consumer key and secret for our app
-		String appId = "[appId here]";
-		String appSecret = "[app secret here]";
+		String appId = "21686";
+		String appSecret = "9acb3f69409f667b9e3";
     	
     	FacebookFactory factory = new FacebookFactory();
     	facebook = factory.getInstance();
