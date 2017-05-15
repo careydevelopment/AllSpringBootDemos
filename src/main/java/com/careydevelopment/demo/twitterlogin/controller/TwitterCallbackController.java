@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import twitter4j.Twitter;
+import twitter4j.auth.AccessToken;
 import twitter4j.auth.RequestToken;
+
 
 @Controller
 public class TwitterCallbackController {
@@ -20,16 +22,22 @@ public class TwitterCallbackController {
 	
 	//This is where we land when we get back from Twitter
     @RequestMapping("/twitterCallback")
-    public String twitterCallback(@RequestParam(value="oauth_verifier", required=true) String oauthVerifier,
+    public String twitterCallback(@RequestParam(value="oauth_verifier", required=false) String oauthVerifier,
+    	@RequestParam(value="denied", required=false) String denied,
     	HttpServletRequest request, HttpServletResponse response, Model model) {
 
+    	if (denied != null) {
+    		//if we get here, the user didn't authorize the app
+    		return "redirect:twitterLogin";
+    	}
+    	
     	//get the objects from the session
     	Twitter twitter = (Twitter) request.getSession().getAttribute("twitter");
         RequestToken requestToken = (RequestToken) request.getSession().getAttribute("requestToken");
         
         try {
         	//get the access token
-            twitter.getOAuthAccessToken(requestToken, oauthVerifier);
+            AccessToken token = twitter.getOAuthAccessToken(requestToken, oauthVerifier);
             
             //take the request token out of the session
             request.getSession().removeAttribute("requestToken");
