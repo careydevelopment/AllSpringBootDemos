@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AjaxDemoController {
 
-	//starting page for AJAX demo
-	@RequestMapping("/ajaxDemo")
-	public String ajaxDemo(Model model) {		
-		//get out
-		return "ajaxDemo";
-	}
+    //starting page for AJAX demo
+    @RequestMapping("/ajaxDemo")
+    public String ajaxDemo(Model model) {		
+        return "ajaxDemo";
+    }
 }

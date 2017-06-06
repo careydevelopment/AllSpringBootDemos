@@ -18,25 +18,25 @@ import twitter4j.auth.RequestToken;
 @Controller
 public class TwitterCallbackController {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(TwitterCallbackController.class); 
-	
-	//This is where we land when we get back from Twitter
+    private static final Logger LOGGER = LoggerFactory.getLogger(TwitterCallbackController.class); 
+    
+    //This is where we land when we get back from Twitter
     @RequestMapping("/twitterCallback")
     public String twitterCallback(@RequestParam(value="oauth_verifier", required=false) String oauthVerifier,
-    	@RequestParam(value="denied", required=false) String denied,
-    	HttpServletRequest request, HttpServletResponse response, Model model) {
-
-    	if (denied != null) {
-    		//if we get here, the user didn't authorize the app
-    		return "redirect:twitterLogin";
-    	}
+        @RequestParam(value="denied", required=false) String denied,
+        HttpServletRequest request, HttpServletResponse response, Model model) {
+    
+        if (denied != null) {
+            //if we get here, the user didn't authorize the app
+            return "redirect:twitterLogin";
+        }
     	
-    	//get the objects from the session
-    	Twitter twitter = (Twitter) request.getSession().getAttribute("twitter");
+        //get the objects from the session
+        Twitter twitter = (Twitter) request.getSession().getAttribute("twitter");
         RequestToken requestToken = (RequestToken) request.getSession().getAttribute("requestToken");
         
         try {
-        	//get the access token
+            //get the access token
             AccessToken token = twitter.getOAuthAccessToken(requestToken, oauthVerifier);
             
             //take the request token out of the session
