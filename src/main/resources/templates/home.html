@@ -19,17 +19,15 @@
         	}
         </style>
         <script>
-            function preload(arrayOfImages) {
-                $(arrayOfImages).each(function(){
-                    $('<img/>')[0].src = this;
-                });
+        	//preload the header image
+            var img = new Image();
+            img.src = './images/demos.png';
+            img.onload = showHeader;
+            
+            function showHeader() {
+                $('#demo-spinner').hide();
+                $('#demo-header').fadeIn(1000);            	
             }
-
-        	$(window).load(function(){
-                preload([
-                    './images/demos.png'
-                ]);
-        	});
         </script>
     </head>
     
@@ -257,8 +255,4 @@
         </div>
         <div th:include="fragments/homefooter :: footer"></div>
     </body>
-    <script>
-        $('#demo-spinner').hide();
-        $('#demo-header').fadeIn(1000);
-    </script>
 </html>
