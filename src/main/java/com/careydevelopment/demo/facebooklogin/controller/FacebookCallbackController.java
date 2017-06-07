@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import facebook4j.Facebook;
+import facebook4j.auth.AccessToken;
 
 @Controller
 public class FacebookCallbackController {
@@ -26,7 +27,7 @@ public class FacebookCallbackController {
         Facebook facebook = (Facebook) request.getSession().getAttribute("facebook");
         
         try {
-            facebook.getOAuthAccessToken(oauthCode);
+            AccessToken token = facebook.getOAuthAccessToken(oauthCode);
         	
             //store the user name so we can display it on the web page
             model.addAttribute("username", facebook.getName());
