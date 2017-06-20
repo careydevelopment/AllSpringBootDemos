@@ -1,4 +1,4 @@
-package com.careydevelopment.demo;
+package com.careydevelopment.demo.config;
 
 import java.beans.PropertyEditorSupport;
 
