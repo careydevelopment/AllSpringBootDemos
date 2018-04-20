@@ -17,6 +17,12 @@
         		height:auto; 
         		display:inline-block;
         	}
+        	.app-portlet {
+				margin-bottom:30px;
+			}
+			.app-desc {
+				height:130px;
+			}
         </style>
     </head>
     
@@ -26,12 +32,12 @@
             <div class="page-content-wrapper">
                 <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
                     <div class="container">
-                    	<div class="row" style="text-align:center">
+                    	<div class="row" style="text-align:center;height:400px">
                     		<img id="demo-header" th:src="@{/images/demos.png}" style="max-width:100%;display:none"/>
-                            <img id="demo-spinner" th:src="@{/images/demo-spinner.gif}" style="margin-top:150px;margin-bottom:100px"/>
+                            <img id="demo-spinner" th:src="@{/images/demo-spinner.gif}" style="margin-top:150px"/>
                     	</div>
                     	<div class="row" style="margin-top:40px">
-      	                      <div class="portlet light portlet-fit ">
+      	                      <div class="portlet light portlet-fit">
                                       <div class="portlet-title">
                                           <div class="caption">
                                               <i class="icon-microphone font-dark hide"></i>
@@ -41,7 +47,7 @@
                                       </div>
                                       <div class="portlet-body">
                                           <div class="row">
-                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   <div class="mt-widget-2">
                                                       <div class="mt-head">
                                                       	  <div style="text-align:center">
@@ -49,10 +55,12 @@
                                                           </div>
                                                       </div>
                                                       <div class="mt-body" style="margin-top:15px">
-                                                          <h3 class="mt-body-title"> Twitter Login </h3>
-                                                          <p class="mt-body-description"> Lets a user login with with Twitter to a Spring Boot app. Great for 
+                                                      	  <div class="app-desc">
+                                                          	<h3 class="mt-body-title"> Twitter Login </h3>
+                                                          	<p class="mt-body-description"> Lets a user login with with Twitter to a Spring Boot app. Great for 
     	                                                		implementing SSO-like capabilities so you don't have to force users to
     	                                                		go through the whole email verification thing. </p>
+    	                                                  </div>
                                                           <div class="mt-body-actions">
                                                               <div class="btn-group btn-group btn-group-justified">
                                                                   <a href="./twitterLogin" target="_blank" class="btn">
@@ -62,7 +70,7 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   <div class="mt-widget-2">
                                                       <div class="mt-head">
                                                       	  <div style="text-align:center">
@@ -70,10 +78,12 @@
                                                           </div>
                                                       </div>
                                                       <div class="mt-body" style="margin-top:15px">
-                                                        <h3 class="mt-body-title"> Facebook Login </h3>
-                                                        <p class="mt-body-description"> Lets a user login with with Facebook to a Spring Boot app. Great for 
+                                                        <div class="app-desc">
+                                                        	<h3 class="mt-body-title"> Facebook Login </h3>
+                                                        	<p class="mt-body-description"> Lets a user login with with Facebook to a Spring Boot app. Great for 
     	                                                       implementing SSO-like capabilities so you don't have to force users to
     	                                                       go through the whole email verification thing. </p>
+    	                                                </div>
                                                         <div class="mt-body-actions">
                                                             <div class="btn-group btn-group btn-group-justified">
                                                                 <a href="./facebookLogin" class="btn" target="_blank">
@@ -83,7 +93,7 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   <div class="mt-widget-2">
                                                       <div class="mt-head">
                                                       	  <div style="text-align:center">
@@ -91,8 +101,10 @@
                                                           </div>
                                                       </div>
                                                       <div class="mt-body" style="margin-top:15px">
-                                                          <h3 class="mt-body-title"> Zillow API </h3>
-                                                          <p class="mt-body-description"> This demo demonstrates integration with the Zillow API. Just enter a U.S. home address and view its valuation!</p>
+                                                      	  <div class="app-desc">
+                                                          	<h3 class="mt-body-title"> Zillow API </h3>
+                                                          	<p class="mt-body-description"> This demo demonstrates integration with the Zillow API. Just enter a U.S. home address and view its valuation!</p>
+                                                          </div>
                                                           <div class="mt-body-actions">
                                                               <div class="btn-group btn-group btn-group-justified">
                                                                   <a href="./enterAddress" class="btn" target="_blank">
@@ -105,7 +117,7 @@
                                           </div>
                                           <div class="portlet-body">
                                               <div class="row">
-                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                       <div class="mt-widget-2">
                                                           <div class="mt-head">
                                                           	  <div style="text-align:center">
@@ -113,8 +125,10 @@
                                                               </div>
                                                           </div>
                                                           <div class="mt-body" style="margin-top:15px">
-                                                              <h3 class="mt-body-title"> YouTube API </h3>
-                                                              <p class="mt-body-description"> This demo demonstrates integration with the YouTube API. Enter a search string and find up to 5 videos that match it. </p>
+                                                          	  <div class="app-desc">
+                                                              	<h3 class="mt-body-title"> YouTube API </h3>
+                                                              	<p class="mt-body-description"> This demo demonstrates integration with the YouTube API. Enter a search string and find up to 5 videos that match it. </p>
+                                                              </div>
                                                               <div class="mt-body-actions">
                                                                   <div class="btn-group btn-group btn-group-justified">
                                                                       <a href="./youtubeDemo" class="btn" target="_blank">
@@ -124,7 +138,7 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   </div>
                                                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
                                                   </div>                                              
@@ -146,7 +160,7 @@
                                       </div>
                                       <div class="portlet-body">
                                           <div class="row">
-                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   <div class="mt-widget-2">
                                                       <div class="mt-head">
                                                       	  <div style="text-align:center">
@@ -154,9 +168,11 @@
                                                           </div>
                                                       </div>
                                                       <div class="mt-body" style="margin-top:15px">
-                                                          <h3 class="mt-body-title"> REST Demo </h3>
-                                                          <p class="mt-body-description"> This simple REST (REpresentational State Transfer) demo simulates a service that returns
+                                                      	  <div class="app-desc">
+                                                          	<h3 class="mt-body-title"> REST Demo </h3>
+                                                          	<p class="mt-body-description"> This simple REST (REpresentational State Transfer) demo simulates a service that returns
                                                         employee info in JSON (JavaScript Object Notation) format.</p>
+                                                          </div>
                                                           <div class="mt-body-actions">
                                                               <div class="btn-group btn-group btn-group-justified">
                                                                   <a href="./employees" class="btn" target="_blank">
@@ -166,7 +182,7 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   <div class="mt-widget-2">
                                                       <div class="mt-head">
                                                       	  <div style="text-align:center">
@@ -174,9 +190,11 @@
                                                           </div>
                                                       </div>
                                                       <div class="mt-body" style="margin-top:15px">
-                                                          <h3 class="mt-body-title"> AJAX Demo </h3>
-                                                          <p class="mt-body-description"> Want to see Asynchronous Javascript and XML (AJAX) in action? This demo
+                                                      	  <div class="app-desc">
+                                                          	<h3 class="mt-body-title"> AJAX Demo </h3>
+                                                          	<p class="mt-body-description"> Want to see Asynchronous Javascript and XML (AJAX) in action? This demo
                                                           shows how to use Spring Boot to provide a richer user experience. </p>
+                                                      	  </div>
                                                           <div class="mt-body-actions">
                                                               <div class="btn-group btn-group btn-group-justified">
                                                                   <a href="./ajaxDemo" class="btn" target="_blank">
@@ -186,7 +204,7 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                   <div class="mt-widget-2">
                                                       <div class="mt-head">
                                                       	  <div style="text-align:center">
@@ -194,8 +212,10 @@
                                                           </div>
                                                       </div>
                                                       <div class="mt-body" style="margin-top:15px">
+                                                      	  <div class="app-desc">
                                                           <h3 class="mt-body-title"> Form Validation </h3>
                                                           <p class="mt-body-description">This form validation demo shows how you can validate form fields with annotations on model objects. No JQuery required!</p>
+                                                          </div>
                                                           <div class="mt-body-actions">
                                                               <div class="btn-group btn-group btn-group-justified">
                                                                   <a href="./form" class="btn" target="_blank">
@@ -208,7 +228,7 @@
                                           </div>
                                           <div class="portlet-body">
                                               <div class="row">
-                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                       <div class="mt-widget-2">
                                                           <div class="mt-head">
                                                           	  <div style="text-align:center">
@@ -216,10 +236,12 @@
                                                               </div>
                                                           </div>
                                                           <div class="mt-body" style="margin-top:15px">
-                                                              <h3 class="mt-body-title"> Internationalization Demo </h3>
-                                                              <p class="mt-body-description"> It's a global economy. That's why you should add 
+                                                          	  <div class="app-desc">
+                                                              	<h3 class="mt-body-title"> Internationalization Demo </h3>
+                                                              	<p class="mt-body-description"> It's a global economy. That's why you should add 
                                                                 internationalization to your Spring Boot app. This demo proves you can make
                                                                 that happen.</p>
+                                                              </div>
                                                               <div class="mt-body-actions">
                                                                   <div class="btn-group btn-group btn-group-justified">
                                                                       <a href="./international" class="btn" target="_blank">
@@ -229,7 +251,7 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                       <div class="mt-widget-2">
                                                           <div class="mt-head">
                                                               <div style="text-align:center">
@@ -237,10 +259,12 @@
                                                               </div>
                                                           </div>
                                                           <div class="mt-body" style="margin-top:15px">
-                                                              <h3 class="mt-body-title"> Thymeleaf Table Demo </h3>
-                                                              <p class="mt-body-description"> Believe it or not, it's harder to create dynamic tables with Thymleleaf than you might think. 
+                                                              <div class="app-desc">
+                                                              	<h3 class="mt-body-title"> Thymeleaf Table Demo </h3>
+                                                              	<p class="mt-body-description"> Believe it or not, it's harder to create dynamic tables with Thymleleaf than you might think. 
                                                                     This demo shows you the table in action, which doesn't seem very impressive. Be sure to have a look
                                                                     at the code so you can see how it's done. </p>
+                                                              </div>
                                                               <div class="mt-body-actions">
                                                                   <div class="btn-group btn-group btn-group-justified">
                                                                       <a href="./thymeleafTable" class="btn" target="_blank">
@@ -250,7 +274,7 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="margin-bottom:30px">
+                                                  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 app-portlet">
                                                       <div class="mt-widget-2">
                                                           <div class="mt-head">
                                                               <div style="text-align:center">
@@ -258,9 +282,11 @@
                                                               </div>
                                                           </div>
                                                           <div class="mt-body" style="margin-top:15px">
-                                                              <h3 class="mt-body-title"> Highcharts Demo </h3>
-                                                              <p class="mt-body-description"> How would you like to show some great, 3D charts with your
+                                                          	  <div class="app-desc">
+                                                              	<h3 class="mt-body-title"> Highcharts Demo </h3>
+                                                              	<p class="mt-body-description"> How would you like to show some great, 3D charts with your
                                                               app? This demo shows you how to integrate Highcharts with Spring Boot. </p>
+                                                              </div>
                                                               <div class="mt-body-actions">
                                                                   <div class="btn-group btn-group btn-group-justified">
                                                                       <a href="./chart" class="btn" target="_blank">
