@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+    <head>
+        <title>Braintree Transaction Results | Carey Development Demos</title>
+        <meta content="This demo shows how to integrate Braintree with Spring Boot" name="description" />
+        <object th:include="fragments/head :: head" th:remove="tag"></object>
+        
+        <script th:src="@{/javascript/demo.js}"></script>
+    </head>
+    
+    <body class="page-container-bg-solid">
+        <div th:include="fragments/topmenuheader :: header"></div>
+        <div class="page-container">
+            <div class="page-content-wrapper">
+                <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
+                    <div class="container">
+                        <div class="row" style="margin-bottom:30px">
+							<div class="col-md-12">
+								<div th:if="${isSuccess}" class="note note-success">
+                                	<h4 class="block">Success!</h4>
+                                    <p> Your test payment was processed successfully! Check out the details below. </p>
+                                </div>
+                             	<div th:unless="${isSuccess}" class="note note-danger">
+                                	<h4 class="block">Problem</h4>
+                                	<p th:text="${transaction.getStatus()}"></p>
+                                </div>
+    						</div>                    
+                        </div>
+                        <div class="row" style="margin-bottom:30px">
+                            <div class="portlet light portlet-fit ">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="icon-settings font-green"></i>
+                                        <span class="caption-subject font-green sbold uppercase" style="position:relative;top:2px">Transaction Details</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="table-scrollable table-scrollable-borderless">
+                                        <table class="table table-hover table-light">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th> ID </th>
+                                                    <th> Type </th>
+                                                    <th> Amount </th>
+                                                    <th> Status </th>
+                                                    <th> Created </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td th:text="${transaction.getId()}"></td>
+                                                    <td th:text="${transaction.getType()}"></td>
+                                                    <td th:text="${transaction.getAmount()}"></td>
+                                                    <td th:text="${transaction.getStatus()}"></td>
+                                                    <td th:text="${new java.text.SimpleDateFormat('yyyy-MM-dd HH:mm:ss Z').format(transaction.getUpdatedAt().getTime())}"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>                                
+                            </div>
+                            
+                            <button type="button" class="btn green" style="margin-top:15px" onclick="location.href='/checkouts/new'">Another Transaction</button>
+                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:include="fragments/homefooter :: footer"></div>
+		<script th:src="@{/javascript/demo.js}"></script>
+    </body>
+</html>
