@@ -30,9 +30,9 @@
     	<version>[4.0,)</version>
     </dependency>
     <dependency>
-  		<groupId>org.facebook4j</groupId>
-  		<artifactId>facebook4j-core</artifactId>
-  		<version>[2.4,)</version>
+		<groupId>org.facebook4j</groupId>
+		<artifactId>facebook4j-core</artifactId>
+		<version>[2.4,)</version>
 	</dependency>
 	<dependency>
          <groupId>com.google.apis</groupId>
@@ -49,7 +49,6 @@
          <artifactId>google-collections</artifactId>
          <version>1.0</version>
     </dependency>
-    
   </dependencies>
   
   <properties>
